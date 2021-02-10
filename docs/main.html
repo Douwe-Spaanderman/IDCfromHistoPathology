@@ -13121,7 +13121,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="What-is-Invasive-Ductal-Carcinoma?-">What is Invasive Ductal Carcinoma? <a name="introduction" /><a class="anchor-link" href="#What-is-Invasive-Ductal-Carcinoma?-">&#182;</a></h2><p>Invasive Ductal Carcinoma (IDC) is the most common type of breast cancer. About 80% of all breast cancers are invasive ductal carcinomas. Ductal means that the cancer began in the milk ducts (A) of the breast which function as pipes that carry the milk from the lobules (B) to the nipple (D). Carcinomas is a type of cancer that starts in cells that make up the skin or the tissue lining of organs, such as breast tissue. Invasive ductal carcinoma in contrast to ductal carcinoma in situ refers to the invasive nature of the tumor into the surrounding breast tissues. IDCs are a heterogenous group of tumors with high morphological variations and are normally classified into histopathological subtypes according to a wide range of criteria, including cell type (as in apocrine carcinoma), amount, type and location of secretion (as in mucinous carcinoma), architectural features (as in papillary, tubular, and micropapillary carcinoma), and immunohistochemical profile (as in neuroendocrine carcinoma). Over time, IDCs can spread to lymph nodes and possibly other areas of the body. Treatments for IDCs include surgery, chemotherapy, radiation therapy, hormonal therapy, and targeted therapy.</p>
-<p><img src="fig1.jpg" alt="Figure 1"></p>
+<p><img src="https://raw.githubusercontent.com/Douwe-Spaanderman/IDCfromHistoPathology/main/docs/fig1.jpg" alt="Figure 1"></p>
 <p>ref: Diversity of Breast Carcinoma: Histological Subtypes and Clinical Relevance</p>
 
 </div>
@@ -14005,7 +14005,7 @@ Clipping input data to the valid range for imshow with RGB data ([0..1] for floa
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="3-layer-CNN-">3-layer CNN <a name="paragraph3c_1" /><a class="anchor-link" href="#3-layer-CNN-">&#182;</a></h4><p>For this model I am trying to mimic the convolution neural network that they made for the paper. Which uses a 3 layer Convolutional Neural Network with two convolutional and pooling layers, a full-connected layer and a logistic regression classifier. Furthermore, the convolution layers are activated using a tanh function and are followed by a pooling layers without overlap. Classification is done using logsoftmax function. Finally, the model is trained using stochastic gradient descent to minimize the Binary Cross-Entropy loss function.</p>
-<p><img src="fig2.png" alt="Figure 2"></p>
+<p><img src="https://raw.githubusercontent.com/Douwe-Spaanderman/IDCfromHistoPathology/main/docs/fig2.png" alt="Figure 2"></p>
 <p>Note that the number of input pixels is slightly different in the paper. In theory I could recreate the whole image and than take non-overlapping pieces in the same dimension, however for now 50px by 50px would do. As the stride and padding is not described in the paper I have to calculate these based on the output size using the following formula:</p>
 <p>$O = \frac{W-K+2P}{S}+1$</p>
 <p>where $O$ is the output height/length, $W$ is the input height/length, $K$ is the filter size, $P$ is the padding, and $S$ is the stride.</p>
@@ -14286,7 +14286,7 @@ Iteration: 8500  Loss: 0.4679122567176819  Accuracy: 78.28763580322266 %
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Pretrained network Resnet18. Further extented using two feed forward layers number of features output to 256 to 2. With Relu activation function, batchnormalization and dropout.</p>
-<p><img src="fig3.png" alt="Figure 3"></p>
+<p><img src="https://raw.githubusercontent.com/Douwe-Spaanderman/IDCfromHistoPathology/main/docs/fig3.png" alt="Figure 3"></p>
 
 </div>
 </div>
@@ -14308,7 +14308,7 @@ Iteration: 8500  Loss: 0.4679122567176819  Accuracy: 78.28763580322266 %
     <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="n">resnet18</span> <span class="o">=</span> <span class="n">resnet18</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="n">resnet18</span> <span class="o">=</span> <span class="n">resnet18</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span><span class="n">s</span>
 </pre></div>
 
     </div>
